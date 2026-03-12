@@ -1,5 +1,4 @@
 class Cart {
-  // same as cartItems = undefined;  but shorten 
   cartItems;
   #localStorageKey;
 
@@ -22,11 +21,11 @@ class Cart {
         deliveryOptionId: '2'
       }];
     }
-  };
+  }
 
   saveToStorage() {
     localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
-  };
+  }
 
   addToCart(productId) {
     let matchingItem;
@@ -48,7 +47,7 @@ class Cart {
     }
 
     this.saveToStorage();
-  };
+  }
 
   removeFromCart(productId) {
     const newCart = [];
@@ -62,7 +61,7 @@ class Cart {
     this.cartItems = newCart;
 
     this.saveToStorage();
-  };
+  }
 
   updateDeliveryOption(productId, deliveryOptionId) {
     let matchingItem;
@@ -77,15 +76,11 @@ class Cart {
 
     this.saveToStorage();
   }
-};
-
+}
 
 const cart = new Cart('cart-oop');
 const businessCart = new Cart('cart-business');
 
-
-
-console.log(cart)
-console.log(businessCart)
-
-console.log(cart instanceof Cart)
+console.log(cart);
+console.log(businessCart);
+console.log(businessCart instanceof Cart);

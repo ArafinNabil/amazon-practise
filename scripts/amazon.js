@@ -18,7 +18,7 @@ products.forEach((product) => {
 
       <div class="product-rating-container">
         <img class="product-rating-stars"
-          src="${product.getStarsurl()}">
+          src="${product.getStarsUrl()}">
         <div class="product-rating-count link-primary">
           ${product.rating.count}
         </div>
@@ -43,7 +43,7 @@ products.forEach((product) => {
         </select>
       </div>
 
-      ${products.extraInfoHTML() }
+      ${product.extraInfoHTML()}
 
       <div class="product-spacer"></div>
 
